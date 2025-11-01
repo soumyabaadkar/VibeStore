@@ -7,7 +7,7 @@ VibeStore is a fullstack e-commerce web application that allows users to browse 
 
 Features
 
--Browse a variety of products with images, names, and prices.
+- Browse a variety of products with images, names, and prices.
 
 - Add and remove items from the shopping cart.
 
@@ -67,29 +67,6 @@ Installation & Setup
    cd app
    npm start
 
-
----
-
-📂VibeStore/
-│
-├── backend/
-│   ├── routes/
-│   │   └── cartRoutes.js
-│   ├── server.js
-│   ├── package.json
-│
-├── vibe-react-app/
-│   ├── src/
-│   │   ├── context/
-│   │   │   ├── cartContext.js
-│   │   │── index.css
-│   │   │── Checkout.js
-│   │   │── Cart.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   ├── package.json
-│
-└── README.md
 
 
 ---
