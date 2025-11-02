@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -93,7 +93,7 @@ function App() {
         </nav>
       </header>
        
-      <Router> 
+  
       <Routes>
         <Route
           path="/"
@@ -166,7 +166,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
-      </Router>
+  
       
       <footer className="footer">
         <h3 className="footer-logo">Vibe Store</h3>
