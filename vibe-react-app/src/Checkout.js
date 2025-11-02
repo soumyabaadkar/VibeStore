@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Checkout() {
   const [cart, setCart] = useState([]);
@@ -8,6 +9,8 @@ function Checkout() {
     email: "",
     address: "",
   });
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://vibestore-sbzb.onrender.com/api/cart")
@@ -41,6 +44,10 @@ function Checkout() {
     setForm({ name: "", email: "", address: "" });
     setCart([]);
     setTotal(0);
+
+    setTimeout(() => {
+      navigate("/");
+    }, 2000)
 
   } catch (err) {
     console.error("Error during checkout:", err);
