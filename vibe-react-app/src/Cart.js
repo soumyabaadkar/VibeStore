@@ -8,7 +8,7 @@ function Cart() {
 
   
   useEffect(() => {
-    fetch("http://localhost:5000/api/cart")
+    fetch("https://vibestore-sbzb.onrender.com/api/cart")
       .then((res) => res.json())
       .then((data) => {
         setCart(data.cart);
@@ -23,7 +23,7 @@ function Cart() {
 
   const handleRemove = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/cart/${id}`, {
+      const res = await fetch(`https://vibestore-sbzb.onrender.com/api/cart/${id}`, {
         method: "DELETE",
       });
       const data = await res.json();

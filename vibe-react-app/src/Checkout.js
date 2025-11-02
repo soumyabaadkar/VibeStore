@@ -10,7 +10,7 @@ function Checkout() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/cart")
+    fetch("https://vibestore-sbzb.onrender.com/api/cart")
       .then((res) => res.json())
       .then((data) => {
         setCart(data.cart);
@@ -26,7 +26,7 @@ function Checkout() {
   const handleCheckout = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch("http://localhost:5000/api/cart/checkout", {
+    const response = await fetch("https://vibestore-sbzb.onrender.com/api/cart/checkout", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
     });

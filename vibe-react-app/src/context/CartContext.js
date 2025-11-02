@@ -7,7 +7,7 @@ export const CartProvider = ({ children }) => {
 
   const fetchCart = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/cart");
+      const res = await fetch("https://vibestore-sbzb.onrender.com/api/cart");
       const data = await res.json();
       setCart(data);
     } catch (err) {
@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = async (product) => {
     try {
-      const res = await fetch("http://localhost:5000/api/cart", {
+      const res = await fetch("https://vibestore-sbzb.onrender.com/api/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(product),
@@ -33,7 +33,7 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/cart/${id}`, {
+      const res = await fetch(`https://vibestore-sbzb.onrender.com/api/cart/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {
@@ -66,7 +66,7 @@ export const CartProvider = ({ children }) => {
 
   const checkout = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/checkout", {
+      const res = await fetch("https://vibestore-sbzb.onrender.com/api/checkout", {
         method: "POST",
       });
       if (res.ok) {
