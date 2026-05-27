@@ -67,6 +67,10 @@ Installation & Setup
    cd app
    npm start
 
+---
+Live Demo
+
+- https://vibe-store.netlify.app/
 
 
 ---
